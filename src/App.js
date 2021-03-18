@@ -1,9 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-
-const someWord = "I realy like how JSX works!";
-const truth = true;
-const situation = false;
+import { count, length } from './numbers'
 
 function App() {
   return (
@@ -13,26 +10,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <p style={{color: 'yellow'}}>
-          Hello world!
-        </p>
         <p>
-          {someWord}
-        </p>
-        <p>
-          {23}    
-        </p>
-        <p>
-          {23+50}    
-        </p>
-        <p>
-          {truth&&"Okey, this is turth!"}    
-        </p>
-        <p>
-          {situation ? "This is turth!":"This one can be false;("}    
-        </p>
-        <p>
-          undefined: {undefined}, null: {null}, false: {false}, true: {true}
+          count*length={count*length}
         </p>
         <a
           className="App-link"
