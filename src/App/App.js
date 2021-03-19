@@ -2,6 +2,7 @@ import React from 'react';
 import ItemList from '../ItemList/ItemList';
 import InputItem from '../InputItem/InputItem';
 import Footer from '../Footer/Footer';
+import './App.css'
 
 const countDeal = 10;
 const todoItem = [{
@@ -11,10 +12,10 @@ const todoItem = [{
   }, {
     value: 'Развиваться в разработке дальше!'
   }];
-  
+
 const App = () =>  (
-    <div>
-<h1>Очень важные дела!</h1>
+    <div className="wrap">
+<h1 className="wrap__title">Очень важные дела!</h1>
 <InputItem/>
 <ItemList todoItem={todoItem}/>
 <Footer count={countDeal}/></div>);
