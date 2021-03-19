@@ -4,8 +4,16 @@ import InputItem from '../InputItem/InputItem';
 import Footer from '../Footer/Footer';
 
 const countDeal = 10;
-const todoItem = ['Взять себя в руки!', 'Закончить курсы!', 'Развиваться в разработке дальше!']
-const App = () => (<div>
+const todoItem = [{
+    value: 'Взять себя в руки!'
+  }, {
+    value: 'Закончить курсы!'
+  }, {
+    value: 'Развиваться в разработке дальше!'
+  }];
+  
+const App = () =>  (
+    <div>
 <h1>Очень важные дела!</h1>
 <InputItem/>
 <ItemList todoItem={todoItem}/>
