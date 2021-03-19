@@ -1,8 +1,12 @@
 import React from 'react';
 import ItemList from '../ItemList/ItemList';
+import InputItem from '../InputItem/InputItem';
+import Footer from '../Footer/Footer';
 
 const App = () => (<div>
 <h1>Очень важные дела!</h1>
-<ItemList/></div>);
+<InputItem/>
+<ItemList/>
+<Footer/></div>);
 
 export default App;
