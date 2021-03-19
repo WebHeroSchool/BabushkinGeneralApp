@@ -1,10 +1,8 @@
 import React from 'react';
-const ItemList = () => (<ul>
-  <li>1</li>
-  <li>2</li>
-  </ul>)
+import ItemList from '../ItemList/ItemList';
+
 const App = () => (<div>
-<h1>Hello world!</h1>
+<h1>Очень важные дела!</h1>
 <ItemList/></div>);
 
 export default App;
