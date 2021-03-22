@@ -19,13 +19,8 @@
   font-family: Bitter;
 }
 
-.wrap__title {
+.title {
   font-size: 50px;
   text-align: center;
   color: lightblue;
-}
-
-.wrap__footer {
-  font-weight: bold;
-  font-size: 20px;
 }
