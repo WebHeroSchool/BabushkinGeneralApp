@@ -1,0 +1,26 @@
+@font-face {
+  font-family: Bitter;
+  src: url('./Bitter-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Bitter;
+  src: url('./Bitter-Black.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.wrap {
+  margin:auto;
+  width: 50%;
+  font-size: 25px;
+  font-family: Bitter;
+}
+
+.title {
+  font-size: 50px;
+  text-align: center;
+  color: lightblue;
+}
