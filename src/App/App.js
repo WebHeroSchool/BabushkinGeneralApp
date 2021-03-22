@@ -1,8 +1,8 @@
 import React from 'react';
-import ItemList from '../ItemList/ItemList';
-import InputItem from '../InputItem/InputItem';
-import Footer from '../Footer/Footer';
-import './App.css'
+import ItemList from '../Components/ItemList/ItemList';
+import InputItem from '../Components/InputItem/InputItem';
+import Footer from '../Components/Footer/Footer';
+import './App.css';
 
 const countDeal = 10;
 const todoItem = [{
