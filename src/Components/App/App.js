@@ -4,43 +4,47 @@ import InputItem from '../InputItem/InputItem';
 import Footer from '../Footer/Footer';
 import styles from './App.module.css';
 
-const countDeal = 3;
-
 class App extends React.Component {
   state = {
     items: [{
         value: 'Изучить HTML',
-        isDone: true
+        isDone: true,
+        id: 1
       },
       {
         value: 'Изучить CSS',
-        isDone: true
-
+        isDone: true,
+        id: 2
       },
       {
         value: 'Изучить JavaScript',
-        isDone: false
+        isDone: false,
+        id: 3
       },
       {
         value: 'Изучить React',
-        isDone: false
+        isDone: false, 
+        id: 4
       },
       {
         value: 'Найти работу мечты',
-        isDone: false
+        isDone: false,
+        id: 5
       }
-    ]
+    ],
+    count: 5
   };
 
-  constructor(props) {
-    super(props);
-
-    this.onClickDone = this.onClickDone.bind(this);
-  }
-
-  onClickDone(isDone) {
-    console.log(isDone);
-  }
+  onClickDone = id => {
+      const newItemList = this.state.items.map(item =>{
+        const newItem = { ...item };
+        if (item.id === id) {
+          newItem.isDone = !item.isDone;
+        }
+        return newItem;
+      });
+      this.setState({items: newItemList});
+  };
 
   render() {
     return (
@@ -48,7 +52,7 @@ class App extends React.Component {
       <h1 className={styles.title}>Очень важные дела!</h1>
       <InputItem/>
       <ItemList items={this.state.items} onClickDone={this.onClickDone}/>
-      <Footer count={countDeal}/></div>);
+      <Footer count={this.state.count}/></div>);
   }
 };
 

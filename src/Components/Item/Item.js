@@ -4,7 +4,7 @@ import styles from './Item.module.css';
 import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
 
 
-const Item = ({ value, isDone, onClickDone }) => (<span onClick={()=> onClickDone(isDone)} id="item" className={
+const Item = ({ value, isDone, onClickDone, id }) => (<span onClick={()=> onClickDone(id)} id="item" className={
   classnames({
     [styles.item]: true,
     [styles.done]: isDone 
