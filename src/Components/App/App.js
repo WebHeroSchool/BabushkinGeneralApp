@@ -31,12 +31,23 @@ class App extends React.Component {
       }
     ]
   };
+
+  constructor(props) {
+    super(props);
+
+    this.onClickDone = this.onClickDone.bind(this);
+  }
+
+  onClickDone(isDone) {
+    console.log(isDone);
+  }
+
   render() {
     return (
       <div className={styles.wrap}>
       <h1 className={styles.title}>Очень важные дела!</h1>
       <InputItem/>
-      <ItemList items={this.state.items}/>
+      <ItemList items={this.state.items} onClickDone={this.onClickDone}/>
       <Footer count={countDeal}/></div>);
   }
 };
