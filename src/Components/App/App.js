@@ -6,8 +6,9 @@ import styles from './App.module.css';
 
 const countDeal = 3;
 
-const App = () =>  {
-  const items = [{
+class App extends React.Component {
+  render() {
+     const items = [{
     value: 'Изучить HTML',
     isDone: true
   }, {
@@ -32,6 +33,7 @@ const App = () =>  {
 <InputItem/>
 <ItemList items={items}/>
 <Footer count={countDeal}/></div>);
+  }
 }
 
 export default App;
