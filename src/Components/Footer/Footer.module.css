@@ -1,4 +1,24 @@
+.deals {
+  color: #3f51b5;
+  font-size: 18px;
+  border: solid rgba(63, 81, 181, 0.5) 1px;
+  border-radius: 4px;
+  padding: 5px 15px;
+}
+
 .footer {
-  font-weight: bold;
-  font-size: 20px;
+  display: flex;
+  width: 85%;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 7%;
+}
+
+.buttons {
+  height: 35px;
+}
+
+.button {
+  font-size: 13px;
 }

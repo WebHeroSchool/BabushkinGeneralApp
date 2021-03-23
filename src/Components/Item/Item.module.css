@@ -1,8 +1,24 @@
 .item {
-  color: #B0E0E6;
+  display: flex;
+  color: #3f51b5;
+  width: 85%;
+  height: 50px;
+  margin-left: 7%;
+  line-height: 50px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  border-bottom: rgba(0, 0, 0, 0.3) solid 1px;
 }
 
 .done {
   color: grey;
   text-decoration: line-through;
+}
+
+.delete {
+  visibility: hidden;
+  margin-top: 10px;
+  color: grey;
+  margin-right: 10px;
 }

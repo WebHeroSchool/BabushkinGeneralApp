@@ -4,18 +4,25 @@ import InputItem from '../InputItem/InputItem';
 import Footer from '../Footer/Footer';
 import styles from './App.module.css';
 
-const countDeal = 10;
+const countDeal = 3;
 
 const App = () =>  {
   const items = [{
-    value: 'Взять себя в руки!',
+    value: 'Изучить HTML',
     isDone: true
   }, {
-    value: 'Закончить курсы!', 
-    isDone: false
+    value: 'Изучить CSS', 
+    isDone: true
     
   }, {
-    value: 'Развиваться в разработке дальше!', 
+    value: 'Изучить JavaScript', 
+    isDone: false
+  }, {
+    value: 'Изучить React', 
+    isDone: false
+  }
+  , {
+    value: 'Найти работу мечты', 
     isDone: false
   }];
 
