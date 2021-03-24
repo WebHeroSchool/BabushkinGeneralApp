@@ -4,14 +4,13 @@ import styles from './Item.module.css';
 import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
 
 
-const Item = ({ value, isDone, onClickDone, id }) => (<span onClick={()=> onClickDone(id)} id="item" className={
+const Item = ({ value, isDone, onClickDone, id, onClickDelete }) => (<div id="item" className={styles.wrap}><span onClick={()=> onClickDone(id)} className={
   classnames({
     [styles.item]: true,
     [styles.done]: isDone 
   }) 
 }>
 { value }
-<DeleteOutlinedIcon id="delete" className={styles.delete}/>
-</span>)
+</span><DeleteOutlinedIcon onClick={()=> onClickDelete(id)} className={styles.delete}/></div>)
 
 export default Item;

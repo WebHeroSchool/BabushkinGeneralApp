@@ -19,4 +19,4 @@ for (let elem of ItemOfLists) {
     let del = elem.childNodes[1];
     del.style.visibility = "hidden";
   }
-}
+} 
