@@ -13,4 +13,8 @@ const Item = ({ value, isDone, onClickDone, id, onClickDelete }) => (<div id="it
 { value }
 </span><DeleteOutlinedIcon onClick={()=> onClickDelete(id)} className={styles.delete}/></div>)
 
+Item.defaultProps = {
+  value: "Нет задачи"
+}
+
 export default Item;
