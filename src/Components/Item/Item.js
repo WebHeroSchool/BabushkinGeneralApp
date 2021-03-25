@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from './Item.module.css';
 import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
@@ -15,6 +16,12 @@ const Item = ({ value, isDone, onClickDone, id, onClickDelete }) => (<div id="it
 
 Item.defaultProps = {
   value: "Нет задачи"
-}
+};
+
+Item.propTypes = {
+  value: PropTypes.oneOfType([
+  PropTypes.string,
+  PropTypes.number
+])};
 
 export default Item;
