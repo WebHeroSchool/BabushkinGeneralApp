@@ -13,7 +13,6 @@
 }
 
 .delete {
-  visibility: hidden;
   color: grey;
   margin-right: 10px;
 }

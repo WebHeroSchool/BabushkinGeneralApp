@@ -1,34 +1,45 @@
 import React from 'react';
+import styles from './InputItem.module.css'
 import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& .MuiTextField-root': {
-      margin: theme.spacing(1),
-      width: '85%',
-      marginLeft: '7%'
-    },
-    '& .MuiInputLabel-animated': {
-      fontSize: 29
-    },
-    '& .MuiInputBase-input': {
-      height: '1.8em'
-    }
-  },
-}));
+class InputItem extends React.Component {
+  state = {
+    inputValue: ""
+  };
+  onButtonClick = () => {
+    this.setState({
+      inputValue: ''
+    });
 
-export default function FormPropsTextFields() {
-  const classes = useStyles();
+    this.props.onClickAdd(this.state.inputValue);
+  }
 
-  return (
-    <form className={classes.root} noValidate autoComplete="off">
-      <div>
-          <TextField
-          id="standard-input"
-          label="Добавить дело"
-        />
-      </div>
-    </form>
-  );
+  render() {
+
+    const { onClickAdd } = this.props;
+
+    return(<Grid className ={styles.wrap}>
+      <TextField
+          id='standard-dense'
+          label='Добавить задание'
+          margin='dense'
+          fullWidth
+          value = {this.state.inputValue}
+          onChange={event => this.setState({inputValue: event.target.value})}
+      />
+      <Button
+          disabled={!this.state.inputValue}
+          variant='contained'
+          color='primary'
+          fullWidth
+          onClick = {this.onButtonClick}
+      >
+          Добавить
+      </Button>
+    </Grid>);
+  }
 }
+
+export default InputItem;
