@@ -32,7 +32,8 @@ class App extends React.Component {
         id: 5
       }
     ],
-    count: 5
+    count: 5,
+    idCount: 5
   };
   onClickDone = id => {
       const newItemList = this.state.items.map(item =>{
@@ -47,16 +48,19 @@ class App extends React.Component {
 
   onClickDelete = id => this.setState(state => ({items: state.items.filter(item => item.id !== id), count: state.count - 1}));
 
+  onClickDeleteAll = isDone => this.setState(state => ({items: state.items.filter(item => item.isDone === false), count: state.items.filter(item => item.isDone === false).length}));
+
   onClickAdd = value =>this.setState(state => ({
     items: [
         ...state.items,
         {
           value,
           isDone: false,
-          id: state.count + 1
+          id: state.idCount + 1
         }
     ], 
-    count: state.count + 1
+    count: state.items.length + 1,
+    idCount: state.idCount + 1
   }));
 
   render() {
@@ -69,7 +73,11 @@ class App extends React.Component {
         onClickDone={this.onClickDone}
         onClickDelete={this.onClickDelete}
       />
-      <Footer count={this.state.count}/></div>);
+      <Footer 
+      count={this.state.count} 
+      onClickDeleteAll={this.onClickDeleteAll}
+      />
+      </div>);
   }
 };
 
