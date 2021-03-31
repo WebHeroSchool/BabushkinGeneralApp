@@ -1,0 +1,32 @@
+.item {
+  color: #3f51b5;
+  padding-left: 15px;
+}
+
+.item:hover {
+  cursor: pointer;
+}
+
+.done {
+  color: grey;
+  text-decoration: line-through;
+}
+
+.delete {
+  color: grey;
+  margin-right: 10px;
+}
+
+.delete:hover {
+  cursor: pointer;
+}
+
+.wrap {
+  display: flex;
+  width: 85%;
+  height: 50px;
+  margin-left: 7%;
+  justify-content: space-between;
+  border-bottom: rgba(0, 0, 0, 0.3) solid 1px;
+  align-items: center;
+}

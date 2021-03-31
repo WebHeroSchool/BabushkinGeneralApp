@@ -1,0 +1,55 @@
+@font-face {
+  font-family: Bitter;
+  src: url('./Bitter-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Bitter;
+  src: url('./Bitter-Black.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 70%;
+  font-size: 25px;
+  margin-top: 100px;
+}
+
+body {
+  background-color: #f5f2f2;
+  font-family: Bitter;
+}
+
+.wrapBox {
+  width: 84.5%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 14.5%;
+  box-shadow: 10px 10px 5px rgba(0,0,0,0.3);
+}
+
+.link {
+  width: 100%;
+  background-color: white;
+  border: none;
+  height: 70px;
+  font-size: 28px;
+  font-family: bitter;
+  color: #3f51b5;
+  font-style: italic;
+  outline: none;
+}
+
+.link:hover {
+  background-color: rgba(0,0,0,0.1);
+}
