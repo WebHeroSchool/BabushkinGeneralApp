@@ -13,24 +13,43 @@
 }
 
 .wrap {
-  margin:auto;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
   width: 70%;
   font-size: 25px;
-  font-family: Bitter;
-  padding: 25px;
   margin-top: 100px;
-  background-color: white;
-  box-shadow: 10px 10px 5px rgba(0,0,0,0.3);
-}
-
-.title {
-  font-size: 70px;
-  text-align: center;
-  color: #3f51b5;
-  font-weight: normal;
-  font-style: italic;
 }
 
 body {
   background-color: #f5f2f2;
+  font-family: Bitter;
+}
+
+.wrapBox {
+  width: 84.5%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 14.5%;
+  box-shadow: 10px 10px 5px rgba(0,0,0,0.3);
+}
+
+.link {
+  width: 100%;
+  background-color: white;
+  border: none;
+  height: 70px;
+  font-size: 28px;
+  font-family: bitter;
+  color: #3f51b5;
+  font-style: italic;
+  outline: none;
+}
+
+.link:hover {
+  background-color: rgba(0,0,0,0.1);
 }
